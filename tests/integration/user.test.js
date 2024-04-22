@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../../index');
 const User = require('../../models/User');
-const db = require('../../startup/db');
+const mongoose = require('mongoose');
 
 jest.mock('../../models/User', () => ({
     create: jest.fn(),
@@ -23,7 +23,7 @@ describe('GET /user', () => {
     });
     afterAll(async () => {
         app.close();
-        await db.connection.close();
+        await mongoose.connection.close();
     }, 30000);
     it('Deve retornar um array com 3 elementos', async () => {
         const res = await request(app).get('/api/user');
