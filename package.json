@@ -7,7 +7,7 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "test": "jest --testEnvironment=node --watchAll --verbose --coverage",
-    "deploy": "jest --testEnvironment=node --verbose",
+    "deploy": "jest --testEnvironment=node --verbose --detectOpenHandles",
     "build": "npm i"
   },
   "keywords": [],
