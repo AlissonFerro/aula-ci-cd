@@ -5,6 +5,9 @@ on: [pull_request, push]
 jobs: 
   continuos-integration: 
     runs-on: windows-latest
+    strategy: 
+      matrix: 
+        mongodb-version: [4.2]
 
     steps: 
       - uses: actions/checkout@v3
