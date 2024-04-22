@@ -8,7 +8,7 @@
     "start": "node index.js",
     "test": "jest --testEnvironment=node --watchAll --verbose --coverage NODE_ENV='test'",
     "deploy": "jest --testEnvironment=node --verbose --detectOpenHandles NODE_ENV='test'",
-    "build": "npm i"
+    "build": "CI=false && npm i"
   },
   "keywords": [],
   "author": "",
