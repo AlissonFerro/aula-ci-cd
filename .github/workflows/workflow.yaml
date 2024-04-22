@@ -6,7 +6,7 @@ jobs:
   continuos-integration: 
     runs-on: windows-latest
 
-    step: 
+    steps: 
       - uses: actions/checkout@v3
       - name: Using Node.js
         uses: actions/setup-node@v2
