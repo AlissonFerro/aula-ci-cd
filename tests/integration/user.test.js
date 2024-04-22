@@ -10,11 +10,6 @@ jest.mock('../../models/User', () => ({
     deleteOne: jest.fn(),
 }));
 
-afterAll(async () => {
-    app.close();
-    await mongoose.connection.close();
-});
-
 describe('GET /user', () => {
     beforeEach(() => {
         User.find.mockResolvedValue([
@@ -25,6 +20,10 @@ describe('GET /user', () => {
     });
     afterEach(() => {
         jest.clearAllMocks();
+    });
+    afterAll(async () => {
+        app.close();
+        await mongoose.connection.close();
     });
     it('Deve retornar um array com 3 elementos', async () => {
         const res = await request(app).get('/api/user');
