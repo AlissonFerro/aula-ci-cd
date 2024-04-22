@@ -7,7 +7,8 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "test": "jest --testEnvironment=node --watchAll --verbose --coverage",
-    "build": "npm i && npm start"
+    "deploy": "jest --testEnvironment=node --verbose",
+    "build": "npm i"
   },
   "keywords": [],
   "author": "",
