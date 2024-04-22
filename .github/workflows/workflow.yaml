@@ -16,3 +16,5 @@ jobs:
         run: |
           npm run build
           npm run deploy
+        env: 
+          NODE_ENV: test
