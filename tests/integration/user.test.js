@@ -23,7 +23,7 @@ describe('GET /user', () => {
     });
     afterAll(async () => {
         app.close();
-        await db.close();
+        await db.connection.close();
     }, 30000);
     it('Deve retornar um array com 3 elementos', async () => {
         const res = await request(app).get('/api/user');
