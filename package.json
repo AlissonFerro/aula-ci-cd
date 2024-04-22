@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "test": "jest --testEnvironment=node --watchAll --verbose --coverage set NODE_ENV='test'",
-    "deploy": "jest --testEnvironment=node --verbose --detectOpenHandles set NODE_ENV='test'",
+    "test": "set NODE_ENV='test' jest --testEnvironment=node --watchAll --verbose --coverage",
+    "deploy": "set NODE_ENV=test jest --testEnvironment=node --verbose --detectOpenHandles",    
     "build": "set CI=false && npm i"
   },
   "keywords": [],
