@@ -1,0 +1,27 @@
+{
+  "name": "unit-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "jest --testEnvironment=node --watchAll --verbose --coverage",
+    "build": "npm i && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.11",
+    "express": "^4.19.2",
+    "jest": "^29.7.0",
+    "mongoose": "^8.3.2",
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^9.1.8",
+    "mongodb-memory-server-global": "^9.1.8"
+  }
+}
