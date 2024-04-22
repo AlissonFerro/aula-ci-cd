@@ -21,10 +21,6 @@ describe('GET /user', () => {
     afterEach(() => {
         jest.clearAllMocks();
     });
-    afterAll(async () => {
-        app.close();
-        await mongoose.connection.close();
-    });
     it('Deve retornar um array com 3 elementos', async () => {
         const res = await request(app).get('/api/user');
         expect(res.status).toBe(200);
