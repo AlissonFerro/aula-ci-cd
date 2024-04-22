@@ -6,10 +6,4 @@ module.exports = function(){
 
     mongoose.connect(db)
     .then(() => console.log(`connected to ${db}`));
-    
-    if (process.env.NODE_ENV === 'test') {
-        mongoose.connection.close(function () {
-          console.log('Mongoose connection disconnected');
-        });
-    }
 }
